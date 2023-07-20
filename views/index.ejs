@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;1,400&family=Fragment+Mono&family=Permanent+Marker&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+ body{
+    padding: 0;
+    margin: 0;
+}
+.home{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    /* margin-top: 80px; */
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/images/hero\ \(2\).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.home h1{
+    /* color: white; */
+    font-size: 4vw;
+    font-family: 'Montagu Slab', serif;
+    font-weight: bolder;
+}
+#inf{
+    /* min-width: 798px; */
+    background: linear-gradient(to right, #DD7121, #44BBB4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+    
+}
+.homehead{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    max-width: 50%;
+    color: white;
+    /* margin-bottom: 20%; */
+}
+.nav {
+    width: 100%;
+    height: 13.75vh;
+    display: flex;
+    list-style: none inside;
+    background-color: #111738;
+    /* align-items: center; */
+    text-align: center;
+    /* justify-content: space-between; */
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    z-index: 2;
+  }
+@media screen and (max-width:768px){
+  .home h1{
+      font-size: 5vw;
+      padding-top:24vh ;
+  }
+  .icons a{
+    font-size: 6vw;
+  }
+  .home h2{
+      font-size: 2.5vw;
+  }
+}
+ 
+@media screen and (max-width:480px){
+  .home h1{
+      font-size: 6vw;
+      padding-top:24vh ;
+  }
+  .icons a{
+    font-size: 7vw;
+  }
+  .home h2{
+      font-size: 3.5vw;
+  }
+  .footer{
+    height: 8vh;
+    bottom: 0;
+  }
+}
+
+#logo{
+  height:22vh;
+  position: relative;
+  filter: brightness(10);
+  /* padding-top: 5px; */
+  top:-15px;
+  margin-right: 4vw;
+}
+.icons {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
+    /* gap: 10vw; */
+    /* margin-right: 5vw; */
+}
+.icons a{
+    color: white;
+    display: block;
+    width: 100%;
+    font-size: 2.15vw;
+    text-decoration: none;
+    text-align: center;
+}
+.icons a:hover{
+  text-decoration: underline;
+  color: #16cbb9;
+}
+.eventhead{
+    display: flex;
+    flex-direction: column;
+}
+#events h1,
+#achievements h1{
+    font-size: 3.2rem;
+    font-family: 'Montagu Slab', serif;
+    font-weight: bolder;
+    background: linear-gradient(to right, #DD7121, #44BBB4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 20.1vh;
+    background-color: #07051A;
+}
+.footer h3{
+    color: white;
+}
+
+.auto-type {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  font-size: 2vw;
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+      <img src="/images/logo.png" alt="" id="logo">
+        <div class="icons">
+            <a href="/">Home</a>
+            <a href="/events">Events</a>
+            <a href="/achievements">Achievements</a>
+            <a href="/members">Members</a>
+            <a href="/contact">Contact Us</a>
+        </div>
+    </div>
+    <div class="home" id="home">
+        <div class="homehead">
+            <h1 id="inf"></h1>
+            <h2 class="auto-type">Welcome to the Official Website of the Infosex Society at IIIT Bhubaneswar. 
+
+              At Infosex Society, we are dedicated to fostering a community of passionate cybersecurity enthusiasts, professionals, and learners. Our mission is to promote awareness, understanding, and best practices in the ever-evolving world of cybersecurity</h2>
+        </div>
+    </div>
+    <div class="footer"><h3>©Copyright 2023 |</h3>
+        <img src="/images/logo.png" alt="" height="120px">   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed("#inf", {
+        strings: ["Welcome To Infosec Society"],
+        typeSpeed: 150,
+        loop: false,
+        showCursor: false
+    });
+    window.addEventListener("DOMContentLoaded", function() {
+  var autoType = document.querySelector(".auto-type");
+  autoType.style.animationDelay = "6s";
+});
+
+</script>
+
+</body>
+</html>
